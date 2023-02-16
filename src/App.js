@@ -1,34 +1,29 @@
-import { login } from "./utils";
+import { loginMoch } from "./utils";
 import "./index.css";
 import { useRef, useState } from "react";
 import icon from "./images/login.png";
 import "animate.css";
 const Swal = require("sweetalert2");
 
+
 export default function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [isDisabled, setIsDisabled] = useState(true);
+  const [login, setLogin] = useState({
+    email: '',
+    password: '',
+  });
+  // const [isDisabled, setIsDisabled] = useState({
+  //   isDisabled: true,
+  // });
   const [isRequesting, setIsRequesting] = useState(true);
   const loadingComponent = useRef(null);
-  
-  const onChangeHandler = (event) => {
-    const { value, name } = event.target;
-    if (name === "email") {
-      setEmail(value);
-    }
-    if (name === "password") {
-      setPassword(value);
-    }
-    validateFields();
-  };
-
-  const validateFields = () => {
-    const regex = /\S+@\S+\.\S+/;
-    const isValidEmail = regex.test(email);
-    const isValidPassword = password.length || password.length > 6;
-    const isFieldsValid = isValidEmail && isValidPassword;
-    setIsDisabled(isFieldsValid);
+  const regEmail = /^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/;
+  const isFilled = !!(regEmail.test(login.email) && login.password.length > 5);
+ 
+  const handleChange = (event) => {
+    setLogin({
+      ...login,
+      [event.target.name]: event.target.value,
+    });    
   };
 
   const loading = (state) => {
@@ -43,10 +38,10 @@ export default function LoginForm() {
   }
 
   const submitHandler = async () => {
-    const values = { email: email, password: password };
+    const values = { email: login.email, password: login.password };
     loading(true);
     try {     
-      await login(values);
+      await loginMoch(values);
       await Swal.fire({
         position: "center",
         icon: "success",
@@ -88,9 +83,10 @@ export default function LoginForm() {
             id={"email"}
             type={"email"}
             autoComplete="off"
+            placeholder="E-mail"
             name="email"
-            value={email}
-            onChange={onChangeHandler}
+            value={login.email}
+            onChange={handleChange}
           />
         </div>
         <div className="row">
@@ -99,13 +95,16 @@ export default function LoginForm() {
             id={"password"}
             type={"password"}
             name="password"
-            value={password}
-            onChange={onChangeHandler}
+            value={login.password}
+            onChange={handleChange}
           />
         </div>
 
         <div className="button">
-          <button onClick={submitHandler} disabled={isDisabled && isRequesting}>
+          <button
+            type="button"
+            onClick={submitHandler}
+            disabled={ !isFilled && isRequesting}>
             Login
           </button>
         </div>
