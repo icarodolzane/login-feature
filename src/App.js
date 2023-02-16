@@ -95,6 +95,7 @@ export default function LoginForm() {
             id={"password"}
             type={"password"}
             name="password"
+            placeholder="******"
             value={login.password}
             onChange={handleChange}
           />
