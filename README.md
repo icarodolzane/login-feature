@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# 🇬🇧 Basic Login page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this project I developed a basic login page with email and password validation. 
 
-## Available Scripts
+ 1. The login button must to start disabled.
+ 2. The email must to be valid to enable the login button and the
+    password must to have at least 6 characters.
+*I developed a fake submition to simulate the request the validation, which the email can be any **valid email** and the password must to be **password123** to the validation message be sucessfull otherwise the validation of the credentials will be dennied.* 
+ 3. The login button must to be disabled while the requesting is happening.
+ 4.  A validation message will be displayed in case of validation sucessfull or failed. 
 
-In the project directory, you can run:
+### Technologies used: 
+-React JS Library 
+-Sweet Alert Library
+-Styles: CSS neat.
+ 
+ # 🇧🇷 Página de Login básica.
 
-### `npm start`
+Neste projeto desenvolvi uma página de login básica com validação de e-mail e senha.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  1. O botão de login deve começar desabilitado.
+  2. O e-mail deve ser válido para habilitar o botão de login e a senha deve ter pelo menos 6 caracteres.
+*Desenvolvi uma falsa requisição para simular a solicitação de validação, onde o e-mail pode ser qualquer **e-mail válido** e a senha deve ser **senha123** para que a mensagem de validação seja bem-sucedida caso contrário a validação das credenciais será negada.*
+  3. O botão de login deve estar desabilitado enquanto a solicitação estiver acontecendo.
+  4. Uma mensagem de validação será exibida em caso de validação bem-sucedida ou falha.
+ ### Tecnologias usadas: 
+-Biblioteca React JS 
+-Biblioteca Sweet Alert
+-Estilização: CSS neat.
